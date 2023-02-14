@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #D9D9D9;
+}
