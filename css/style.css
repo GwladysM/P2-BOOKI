@@ -7,6 +7,15 @@ body {
     font-size: 16px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+.part-header {
+    display: flex;
+    gap: 25px;
+}
+
 h1 {
     font-size: 22px;
 }
@@ -17,4 +26,13 @@ h2 {
 
 footer {
     background-color: #D9D9D9;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+.part-footer {
+   display: flex;
+   flex-direction: column;
 }
