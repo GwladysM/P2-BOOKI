@@ -1,20 +1,39 @@
 * {
     margin: 0;
+    text-decoration: none;
+    color: black;
 }
 
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    max-width: 1400px;
+    margin: 40px;
+}
+
+#logo {
+    width: 61px;
+}
+
+nav :hover {
+    color: #0065FC;
+    text-decoration: overline;
 }
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .part-header {
     display: flex;
     gap: 25px;
 }
+
+.hébergements, .populaires {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+
 
 footer {
     background-color: #D9D9D9;
