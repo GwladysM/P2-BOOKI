@@ -1,3 +1,4 @@
+/* propriétées universelles à la page et à certaines balises */
 * {
     margin: 0;
     text-decoration: none;
@@ -10,6 +11,21 @@ body {
     max-width: 1400px;
     margin: 40px;
 }
+
+i {
+    color: #0065FC;
+}
+
+h1 {
+    margin-bottom: 23px;
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+/* PARTIE HEADER - NAVIGATION */
 
 #logo {
     width: 61px;
@@ -29,11 +45,84 @@ nav :hover {
     gap: 25px;
 }
 
+/* PARTIE CENTRALE DE LA PAGE -- Bloc Hébergements */
+
 .hébergements, .populaires {
     background-color: #D9D9D9;
     border-radius: 15px;
+    padding: 40px;
 }
 
+.hébergements {
+    height: 626px;
+    width: 880px;
+}
+
+.liste-hergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.cartes-hébergements {
+    height: 246px;
+    width: 199px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.img-hebergements {
+    width: 246px;
+    height: 124px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.texte-cartes {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* PARTIE CENTRALE DE LA PAGE -- Bloc Les populaires */
+
+.populaires {
+    height: 625px;
+    width: 420px;
+    left: 970px;
+    top: 427px;
+}
+
+.liste-populaires {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cartes-populaires {
+    width : 343px;
+    height: 154px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
+    display: flex;
+}
+
+.img-pop {
+    width: 137px;
+    height: 144px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* PARTIE CENTRALE DE LA PAGE -- Bloc Activités */
+
+/* PARTIE FOOTER */
 
 footer {
     background-color: #D9D9D9;
@@ -42,6 +131,9 @@ footer {
 .footer {
     display: flex;
     justify-content: space-around;
+    padding-top: 45px;
+    padding-bottom: 58px;
+    margin-top: 40px;
 }
 .part-footer {
    display: flex;
