@@ -17,15 +17,15 @@ i {
 }
 
 h1 {
-    margin-bottom: 23px;
+    font-weight: 700;
     font-size: 22px;
+    line-height: 26px;
 }
 
 h2 {
+    font-weight: 700;
     font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 21px;
-    margin-left: 16px;
+    line-height: 19px;
 }
 
 .stars {
@@ -47,6 +47,7 @@ nav :hover {
 .header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 50px;
 }
 .part-header {
     display: flex;
@@ -75,8 +76,8 @@ nav :hover {
 }
 
 .cartes-hébergements {
-    height: 246px;
-    width: 199px;
+    width: 246px;
+    height: 199px;
     background-color: white;
     border-radius: 20px;
     box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -92,7 +93,13 @@ nav :hover {
 
 .texte-cartes {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
+}
+
+.texte-cartes p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 /* PARTIE CENTRALE DE LA PAGE -- Bloc Les populaires */
@@ -161,4 +168,8 @@ footer {
 .part-footer {
    display: flex;
    flex-direction: column;
+}
+
+.part-footer a {
+    margin-top: 12px;
 }
