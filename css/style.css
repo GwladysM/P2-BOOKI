@@ -9,7 +9,9 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     max-width: 1400px;
-    margin: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -41,6 +43,7 @@ h2 {
 .blocs-hébergements-et-populaires {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 40px;
 }
 
@@ -53,21 +56,28 @@ h2 {
 
 #logo {
     width: 61px;
-}
-
-nav :hover {
-    color: #0065FC;
-    text-decoration: overline;
+    height: 19px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: end;
     padding-bottom: 50px;
 }
+
 .part-header {
-    display: flex;
     gap: 25px;
+    display: flex;
+}
+
+.part-header a {
+    padding-top: 46px;
+}
+
+nav :hover {
+    color: #0065FC;
+    border-top: #0065FC solid 2px;
 }
 
 /* PARTIE RECHERCHE  ET FILTRES */
@@ -137,26 +147,47 @@ nav :hover {
     border-radius: 0px 15px 15px 0px;
 }
 
-.fa-info {
+/* BLOC INFO */
+
+.bloc-info {
+    width: 447px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 37px;
+}
+
+.cercle-info {
     border-radius: 30px;
     border: 1px solid #D9D9D9;
     width: 24px;
     height: 24px;
 }
 
+.fa-info { 
+    position: relative;
+    left: 9px;
+    top: 3px;
+}
+
 /* PARTIE CENTRALE DE LA PAGE -- Bloc Hébergements */
 
 .bloc-hébergements {
-    height: 626px;
+    height: 625px;
     width: 880px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .liste-hébergements {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .cartes-hébergements {
@@ -191,6 +222,17 @@ nav :hover {
 .bloc-populaires {
     height: 625px;
     width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.titre-icone-pop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .liste-populaires {
@@ -211,21 +253,34 @@ nav :hover {
 }
 
 .img-pop {
-    height: 144px;
+    width: 137px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
 }
 
-.texte-cartes {
-    display: flex;
-    flex-direction: column;
+.cartes-populaires .texte-cartes {
+    margin: 15px;
+}
+
+.cartes-populaires .texte-cartes .stars {
+    position: relative;
+    top: 30px;
 }
 
 /* PARTIE CENTRALE DE LA PAGE -- Bloc Activités */
 
+.bloc-activités {
+    width: 1337px;
+    height: 493px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
 .liste-activités {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .cartes-activités {
@@ -236,8 +291,15 @@ nav :hover {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.cartes-activités h2 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
 .img-activites {
-    height: 389px;
+    width: 302px;
+    height: 388px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
@@ -250,10 +312,11 @@ footer {
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    gap: 20%;
     padding-top: 45px;
     padding-bottom: 58px;
     margin-top: 40px;
+    padding-left: 40px;
 }
 .part-footer {
    display: flex;
