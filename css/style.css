@@ -12,6 +12,11 @@ body {
     margin: 40px;
 }
 
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 i {
     color: #0065FC;
 }
@@ -29,8 +34,19 @@ h2 {
 }
 
 .stars {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blocs-hébergements-et-populaires {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.bloc-hébergements, .bloc-populaires {
+    background-color: #D9D9D9;
+    border-radius: 15px;
 }
 
 /* PARTIE HEADER - NAVIGATION */
@@ -54,20 +70,88 @@ nav :hover {
     gap: 25px;
 }
 
-/* PARTIE CENTRALE DE LA PAGE -- Bloc Hébergements */
+/* PARTIE RECHERCHE  ET FILTRES */
 
-.bloc-hébergements, .bloc-populaires {
-    background-color: #D9D9D9;
-    border-radius: 15px;
-    padding: 40px;
+.bloc-filtres {
+    width: 914px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+.filtres {
+    width: 828px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.type-filtre {
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 17px;
+    gap: 10px;
+}
+
+.fa-location-dot {
+    color: black;
+    background: #F2F2F2;
+    padding: 15px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#recherche {
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center; 
+}
+
+#bouton-recherche {
+    color: white;
+    background-color: #0065FC;
+    padding: 15px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #0065FC;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.fa-magnifying-glass {
+    color: white;
+    background-color: #0065FC;
+    padding: 15px;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.fa-info {
+    border-radius: 30px;
+    border: 1px solid #D9D9D9;
+    width: 24px;
+    height: 24px;
+}
+
+/* PARTIE CENTRALE DE LA PAGE -- Bloc Hébergements */
 
 .bloc-hébergements {
     height: 626px;
     width: 880px;
 }
 
-.liste-hergements {
+.liste-hébergements {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -84,7 +168,7 @@ nav :hover {
     border: 5px solid white;
 }
 
-.img-hebergements {
+.img-hébergements {
     width: 246px;
     height: 124px;
     object-fit: cover;
@@ -123,12 +207,18 @@ nav :hover {
     box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
     border: 5px solid white;
     display: flex;
+    margin: auto;
 }
 
 .img-pop {
-    height: 137px;
+    height: 144px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
+}
+
+.texte-cartes {
+    display: flex;
+    flex-direction: column;
 }
 
 /* PARTIE CENTRALE DE LA PAGE -- Bloc Activités */
