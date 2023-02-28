@@ -40,6 +40,21 @@ h2 {
     margin-bottom: 5px;
 }
 
+.fa-solid.fa-star.gris {
+    color: #D9D9D9;
+}
+
+button {
+    color: white;
+    background-color: #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #0065FC;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
 .blocs-hébergements-et-populaires {
     display: flex;
     flex-direction: row;
@@ -80,7 +95,43 @@ nav :hover {
     border-top: #0065FC solid 2px;
 }
 
-/* PARTIE RECHERCHE  ET FILTRES */
+/* PARTIE RECHERCHE */
+
+.fa-location-dot {
+    color: black;
+    background: #F2F2F2;
+    padding: 16px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    position: relative;
+    right: 23%;
+}
+
+#recherche {
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    padding: 13px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+form button {
+    position: relative;
+    right: 5%;
+    padding: 14px;
+}
+
+.fa-solid.fa-magnifying-glass {
+    display: none;
+    color: white;
+    background-color: #0065FC;
+    padding: 15px;
+    border-radius: 0px 15px 15px 0px;
+}
+
+/* PARTIE FILTRES */
 
 .bloc-filtres {
     width: 914px;
@@ -98,53 +149,21 @@ nav :hover {
     justify-content: space-between;
 }
 
+.filtres :hover {
+    background-color:#DEEBFF;
+    ;
+}
+
 .type-filtre {
     background-color: white;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     padding: 10px 20px;
     font-weight: 700;
     font-size: 17px;
     gap: 10px;
-}
-
-.fa-location-dot {
-    color: black;
-    background: #F2F2F2;
-    padding: 15px;
-    border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
-}
-
-#recherche {
-    border: 1px solid #F2F2F2;
-    border-radius: 15px;
-    padding: 15px 20px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center; 
-}
-
-#bouton-recherche {
-    color: white;
-    background-color: #0065FC;
-    padding: 15px;
-    border-radius: 0px 15px 15px 0px;
-    border: 1px solid #0065FC;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-}
-
-.fa-magnifying-glass {
-    color: white;
-    background-color: #0065FC;
-    padding: 15px;
-    border-radius: 0px 15px 15px 0px;
 }
 
 /* BLOC INFO */
