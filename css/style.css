@@ -3,15 +3,17 @@
     margin: 0;
     text-decoration: none;
     color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
     max-width: 1400px;
+    min-width: 320px;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 p {
@@ -65,6 +67,12 @@ button {
 .bloc-hébergements, .bloc-populaires {
     background-color: #D9D9D9;
     border-radius: 15px;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.liste-hébergements, .liste-populaires {
+    padding: 10px;
 }
 
 /* PARTIE HEADER - NAVIGATION */
@@ -87,7 +95,7 @@ button {
 }
 
 .part-header a {
-    padding-top: 46px;
+    padding-top: 26px;
 }
 
 nav :hover {
@@ -97,29 +105,35 @@ nav :hover {
 
 /* PARTIE RECHERCHE */
 
+form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.barre-recherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 .fa-location-dot {
     color: black;
     background: #F2F2F2;
     padding: 16px;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
-    position: relative;
-    right: 23%;
 }
 
 #recherche {
     border: 1px solid #F2F2F2;
-    border-radius: 15px;
     padding: 13px 20px;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    text-align: center;
+    text-align: left;
 }
 
 form button {
-    position: relative;
-    right: 5%;
     padding: 14px;
 }
 
@@ -193,29 +207,29 @@ form button {
 /* PARTIE CENTRALE DE LA PAGE -- Bloc Hébergements */
 
 .bloc-hébergements {
-    height: 625px;
-    width: 880px;
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 65%;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    box-sizing: border-box;
 }
 
 .liste-hébergements {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px;
 }
 
 .cartes-hébergements {
-    width: 246px;
-    height: 199px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
     border: 5px solid white;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 30%;
 }
 
 .img-hébergements {
@@ -226,8 +240,12 @@ form button {
 }
 
 .texte-cartes {
+    height: 33%;
     display: flex;
     flex-direction: column; 
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .texte-cartes p {
@@ -239,46 +257,43 @@ form button {
 /* PARTIE CENTRALE DE LA PAGE -- Bloc Les populaires */
 
 .bloc-populaires {
-    height: 625px;
-    width: 420px;
+    width: 32%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 .titre-icone-pop {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
 .liste-populaires {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .cartes-populaires {
-    width : 343px;
-    height: 144px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: (0px 3px 15px rgba(0, 0, 0, 0.1));
     border: 5px solid white;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
     display: flex;
-    margin: auto;
+    box-sizing: border-box;
 }
 
 .img-pop {
-    width: 137px;
+    width: 33%;
+    height: 134px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
 }
 
 .cartes-populaires .texte-cartes {
-    margin: 15px;
+    width: 67%;
+    box-sizing: border-box;
 }
 
 .cartes-populaires .texte-cartes .stars {
@@ -312,8 +327,8 @@ form button {
 
 .cartes-activités h2 {
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: 3%;
+    left: 6%;
 }
 
 .img-activites {
@@ -344,4 +359,18 @@ footer {
 
 .part-footer a {
     margin-top: 12px;
+}
+
+/* RESPONSIVE TABLETTE */
+
+@media (max-width :992px) {
+    .blocs-hébergements-et-populaires {
+        flex-direction: column;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 768px) {
+    
 }
