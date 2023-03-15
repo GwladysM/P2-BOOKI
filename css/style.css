@@ -57,25 +57,7 @@ button {
     text-align: center;
 }
 
-.blocs-hébergements-et-populaires {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.bloc-hébergements, .bloc-populaires {
-    background-color: #D9D9D9;
-    border-radius: 15px;
-    padding: 20px;
-    padding-top: 30px;
-}
-
-.liste-hébergements, .liste-populaires {
-    padding: 10px;
-}
-
-/* PARTIE HEADER - NAVIGATION */
+/* ----- BLOC HEADER - NAVIGATION ----- */
 
 #logo {
     width: 61px;
@@ -103,7 +85,11 @@ nav :hover {
     border-top: #0065FC solid 2px;
 }
 
-/* PARTIE RECHERCHE */
+input #recherche :focus{
+    border-color: black;
+}
+
+/* ----- BLOC RECHERCHE ----- */
 
 form {
     margin-top: 20px;
@@ -133,6 +119,15 @@ form {
     text-align: left;
 }
 
+input :focus {
+    outline: none;
+    border-color: red;
+}
+
+label :focus {
+
+}
+
 form button {
     padding: 14px;
 }
@@ -145,7 +140,7 @@ form button {
     border-radius: 0px 15px 15px 0px;
 }
 
-/* PARTIE FILTRES */
+/* ----- BLOC FILTRES ----- */
 
 .bloc-filtres {
     width: 914px;
@@ -180,7 +175,7 @@ form button {
     gap: 10px;
 }
 
-/* BLOC INFO */
+/* ----- BLOC INFO ----- */
 
 .bloc-info {
     width: 447px;
@@ -204,10 +199,44 @@ form button {
     top: 3px;
 }
 
-/* PARTIE CENTRALE DE LA PAGE -- Bloc Hébergements */
+/* ----- COMMUN A BLOCS HEBERGEMENTS ET POPULAIRES ----- */
+
+.blocs-hébergements-et-populaires {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.bloc-hébergements, .bloc-populaires {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.liste-hébergements, .liste-populaires {
+    padding: 10px;
+}
+
+.texte-cartes {
+    height: 33%;
+    display: flex;
+    flex-direction: column; 
+    box-sizing: border-box;
+}
+
+.texte-cartes p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+/* ----- BLOC HEBERGEMENTS ----- */
 
 .bloc-hébergements {
     width: 65%;
+    min-width: fit-content;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -219,6 +248,8 @@ form button {
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .cartes-hébergements {
@@ -239,25 +270,15 @@ form button {
     border-radius: 20px 20px 0px 0px;
 }
 
-.texte-cartes {
-    height: 33%;
-    display: flex;
-    flex-direction: column; 
-    box-sizing: border-box;
-    padding-left: 10px;
-    padding-top: 10px;
+.cartes-hébergements .texte-cartes {
+    padding: 10px;
 }
 
-.texte-cartes p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-/* PARTIE CENTRALE DE LA PAGE -- Bloc Les populaires */
+/* ----- BLOC POPULAIRES ----- */
 
 .bloc-populaires {
     width: 32%;
+    min-width: 32%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -291,20 +312,16 @@ form button {
     border-radius: 20px 0px 0px 20px;
 }
 
-.cartes-populaires .texte-cartes {
-    width: 67%;
-    box-sizing: border-box;
+.cartes-populaires .bloc-carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.cartes-populaires .texte-cartes .stars {
-    position: relative;
-    top: 30px;
-}
-
-/* PARTIE CENTRALE DE LA PAGE -- Bloc Activités */
+/* ----- BLOC ACTIVITES ----- */
 
 .bloc-activités {
-    width: 1337px;
     height: 493px;
     display: flex;
     flex-direction: column;
@@ -314,10 +331,13 @@ form button {
 
 .liste-activités {
     display: flex;
-    justify-content: space-between;
+    gap: 3%;
 }
 
 .cartes-activités {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
     width: 302px;
     height: 444.51px;
     border-radius: 20px;
@@ -326,19 +346,17 @@ form button {
 }
 
 .cartes-activités h2 {
-    position: relative;
-    top: 3%;
-    left: 6%;
+    padding-left: 15px;
 }
 
 .img-activites {
     width: 302px;
-    height: 388px;
+    height: 88%;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
 
-/* PARTIE FOOTER */
+/* ----- BLOC FOOTER ----- */
 
 footer {
     background-color: #D9D9D9;
@@ -346,11 +364,9 @@ footer {
 
 .footer {
     display: flex;
-    gap: 20%;
-    padding-top: 45px;
-    padding-bottom: 58px;
+    justify-content: space-between;
+    padding: 45px;
     margin-top: 40px;
-    padding-left: 40px;
 }
 .part-footer {
    display: flex;
@@ -361,16 +377,68 @@ footer {
     margin-top: 12px;
 }
 
-/* RESPONSIVE TABLETTE */
+/* ----- RESPONSIVE TABLETTE ----- */
 
-@media (max-width :992px) {
+@media (max-width :991px) {
+    .bloc-filtres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filtres {
+        justify-content: left;
+        gap: 20px;
+    }
+
+    .bloc-info {
+        margin-top: 10%;
+    }
+
     .blocs-hébergements-et-populaires {
         flex-direction: column;
+    }
+
+    .bloc-hébergements, .bloc-populaires {
+        width: 100%;
+    }
+
+    .liste-populaires {
+        flex-direction: row;
+    }
+
+    .cartes-populaires {
+        min-width: 30%;
+    }
+
+    .liste-activités {
+     
+    }
+
+    .cartes-activités {
+
     }
 }
 
 /* RESPONSIVE MOBILE */
 
-@media (max-width: 768px) {
-    
+@media (max-width: 767px) {
+    .blocs-hébergements-et-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .bloc-hébergements, .bloc-populaires, .bloc-activités {
+        width: 100%;
+    }
+
+    .liste-activités {
+        flex-direction: column;
+    }
+
+    .fa-solid.fa-magnifying-glass {
+        display: block;
+    }
+
+    button {
+        display: none;
+    }
 }
