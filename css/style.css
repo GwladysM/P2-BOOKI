@@ -203,7 +203,6 @@ form button {
 
 .blocs-hébergements-et-populaires {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     gap: 40px;
 }
@@ -236,7 +235,7 @@ form button {
 
 .bloc-hébergements {
     width: 65%;
-    min-width: fit-content;
+    min-width: 860px;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -278,7 +277,7 @@ form button {
 
 .bloc-populaires {
     width: 32%;
-    min-width: 32%;
+    min-width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -293,6 +292,7 @@ form button {
 .liste-populaires {
     display: flex;
     flex-direction: column;
+    height: 144px;
     gap: 20px;
 }
 
@@ -306,8 +306,8 @@ form button {
 }
 
 .img-pop {
-    width: 33%;
-    height: 134px;
+    width: 123px;
+    height: 144px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
 }
@@ -337,16 +337,15 @@ form button {
 .cartes-activités {
     display: flex;
     flex-direction: column;
-    gap: 3%;
     width: 302px;
     height: 444.51px;
     border-radius: 20px;
-    border: 1px solid #D9D9D9;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border: 0px solid white;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cartes-activités h2 {
-    padding-left: 15px;
+    padding: 15px;
 }
 
 .img-activites {
@@ -364,13 +363,13 @@ footer {
 
 .footer {
     display: flex;
-    justify-content: space-between;
     padding: 45px;
     margin-top: 40px;
 }
 .part-footer {
    display: flex;
    flex-direction: column;
+   width: 100%;
 }
 
 .part-footer a {
@@ -379,7 +378,7 @@ footer {
 
 /* ----- RESPONSIVE TABLETTE ----- */
 
-@media (max-width :991px) {
+@media screen and (max-width :991px) {
     .bloc-filtres {
         flex-direction: column;
         align-items: flex-start;
@@ -399,7 +398,7 @@ footer {
     }
 
     .bloc-hébergements, .bloc-populaires {
-        width: 100%;
+        width: 920px;
     }
 
     .liste-populaires {
@@ -410,28 +409,82 @@ footer {
         min-width: 30%;
     }
 
+    .img-pop {
+        width: 92px;
+        height: auto;
+    }
+
+    .bloc-carte {
+        width: 183px;
+        height: auto;
+    }
+
+    .bloc-activités {
+        height: 390px;
+        width: 924px;
+        justify-content: space-evenly;
+    }
+
     .liste-activités {
-     
+        width: 920px;
+        justify-content: space-around;
     }
 
     .cartes-activités {
+        width: 193px;
+        height: 100%;
+    }
 
+    .cartes-activités h2 {
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .img-activites {
+        width: 193px;
+        height: 200px;
     }
 }
 
 /* RESPONSIVE MOBILE */
 
-@media (max-width: 767px) {
-    .blocs-hébergements-et-populaires {
-        flex-direction: column-reverse;
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0;
     }
 
-    .bloc-hébergements, .bloc-populaires, .bloc-activités {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0px;
+    }
+
+    #logo {
+        padding: 20px;
+    }
+
+    .recherche-et-filtres {
+        margin: 20px;
+    }
+
+    .header nav {
         width: 100%;
     }
 
-    .liste-activités {
-        flex-direction: column;
+    .part-header a {
+        width: 100%;
+        padding-bottom: 26px;
+        border-bottom: #D9D9D9 solid 2px;
+        text-align: center;
+    }
+
+    nav :hover {
+        border-top: none;
+        border-bottom: #0065FC solid 2px;
+    }
+
+    .barre-recherche {
+        justify-content: center;
     }
 
     .fa-solid.fa-magnifying-glass {
@@ -440,5 +493,64 @@ footer {
 
     button {
         display: none;
+    }
+
+    .bloc-filtres {
+        height: 110px;
+    }
+
+    .type-filtre {
+        flex-wrap: wrap;
+    }
+
+    .blocs-hébergements-et-populaires {
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+    }
+
+    .bloc-hébergements, .bloc-populaires, .bloc-activités {
+        width: 100%;
+        min-width: auto;
+        height: fit-content;
+        border-radius: 0px;
+    }
+
+    .bloc-hébergements {
+        background-color: white;
+    }
+
+    .liste-populaires, .liste-hébergements, .liste-activités, .footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+    }
+
+    .liste-activités {
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+
+    .cartes-hébergements, .cartes-populaires {
+        width: 100%;
+    }
+
+    .cartes-activités {
+        width: 80%;
+    }
+
+    .img-hébergements, .img-activites {
+        width: 100%;
+    }
+
+    #liste-activités {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .part-footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
