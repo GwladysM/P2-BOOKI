@@ -5,6 +5,7 @@
     color: black;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    font-weight: 400;
 }
 
 body {
@@ -21,6 +22,18 @@ body {
     box-sizing: border-box;
 }
 
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
 p {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -30,18 +43,6 @@ i {
     color: #0065FC;
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-}
-
 .stars {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -49,17 +50,6 @@ h2 {
 
 .fa-solid.fa-star.gris {
     color: #D9D9D9;
-}
-
-button {
-    color: white;
-    background-color: #0065FC;
-    border-radius: 0px 15px 15px 0px;
-    border: 1px solid #0065FC;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
 }
 
 /* ----- BLOC HEADER - NAVIGATION ----- */
@@ -115,6 +105,17 @@ form {
     border-radius: 15px 0px 0px 15px;
 }
 
+button {
+    color: white;
+    background-color: #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #0065FC;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
 #recherche {
     border: 1px solid #F2F2F2;
     padding: 13px 20px;
@@ -122,11 +123,6 @@ form {
     font-size: 18px;
     line-height: 21px;
     text-align: left;
-}
-
-input :focus {
-    outline: none;
-    border-color: red;
 }
 
 form button {
@@ -147,7 +143,7 @@ form button {
     height: 50px;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 25px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -161,7 +157,6 @@ form button {
 
 .type-filtre :hover {
     background-color:#DEEBFF;
-    ;
 }
 
 .type-filtre {
@@ -176,6 +171,11 @@ form button {
     border-radius: 25px;
     padding: 10px 20px;
     gap: 10px;
+}
+
+button span, .bloc-filtres p {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /* ----- BLOC INFO ----- */
@@ -220,7 +220,7 @@ form button {
 }
 
 .liste-hébergements, .liste-populaires {
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .texte-cartes {
@@ -299,7 +299,6 @@ a[href="Afficher-plus"] {
 }
 
 .cartes-populaires {
-    height: 30%;
     height: 150px;
     background-color: white;
     border-radius: 20px;
@@ -310,7 +309,7 @@ a[href="Afficher-plus"] {
 }
 
 .img-pop {
-    width: 40%;
+    width: 30%;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
 }
@@ -327,16 +326,16 @@ a[href="Afficher-plus"] {
 /* ----- BLOC ACTIVITES ----- */
 
 .bloc-activités {
-    height: 493px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-top: 40px;
+    margin: 8% 0%;
 }
 
 .liste-activités {
     display: flex;
     gap: 3%;
+    padding-top: 20px;
 }
 
 .cartes-activités {
@@ -348,7 +347,7 @@ a[href="Afficher-plus"] {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-.cartes-activités h2 {
+.cartes-activités h3 {
     padding: 15px;
     height: 30px;
 }
@@ -381,17 +380,17 @@ footer {
     margin-top: 12px;
 }
 
+.part-footer span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
 /* ----- RESPONSIVE TABLETTE ----- */
 
 @media screen and (max-width :992px) {
     .bloc-filtres {
         flex-direction: column;
         align-items: flex-start;
-    }
-    
-    .filtres {
-        justify-content: left;
-        gap: 20px;
     }
 
     .bloc-info {
@@ -403,7 +402,7 @@ footer {
     }
 
     .bloc-hébergements, .bloc-populaires {
-        width: 100%;
+        width: 95%;
     }
 
     .liste-populaires {
@@ -412,7 +411,6 @@ footer {
 
     .cartes-populaires {
         width: 100%;
-        height: auto;
     }
 
     .cartes-populaires .bloc-carte {
@@ -420,7 +418,6 @@ footer {
     }
 
     .img-pop {
-        width: 92px;
         height: auto;
     }
 
@@ -437,7 +434,7 @@ footer {
         height: 100%;
     }
 
-    .cartes-activités h2 {
+    .cartes-activités h3 {
         display: inline;
         vertical-align: middle;
     }
@@ -466,7 +463,7 @@ footer {
         padding-bottom: 0px;
     }
 
-    .bloc-hébergements h1, .bloc-activités h1 {
+    .bloc-hébergements h2, .bloc-activités h2 {
         padding-left: 20px;
     }
 
@@ -514,15 +511,21 @@ footer {
 
     .filtres {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .type-filtre {
+        width: 45%;
     }
 
     .type-filtre button{
-        width: 150px;
-        padding: 10px 10px;
+        width: 100%;
+        max-width: 250px;
+        padding: 10px 20px;
     }
 
     .type-filtre button span {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .bloc-info {
@@ -596,7 +599,7 @@ footer {
         padding-bottom: 15px;
     }
 
-    a[href="##"] {
+    a[href="Afficher-plus"] {
         display: none;
     }
 }
