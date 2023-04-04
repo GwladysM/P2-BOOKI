@@ -151,7 +151,7 @@ form button {
 .filtres {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 1%;
     width: 100%;
 }
 
@@ -272,7 +272,7 @@ button span, .bloc-filtres p {
     padding: 10px;
 }
 
-a[href="Afficher-plus"] {
+.afficher-plus {
     font-weight: bold;
 }
 
@@ -512,6 +512,7 @@ footer {
     .filtres {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 20px;
     }
 
     .type-filtre {
