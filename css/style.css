@@ -600,7 +600,7 @@ footer {
         padding-bottom: 15px;
     }
 
-    a[href="Afficher-plus"] {
+    .afficher-plus {
         display: none;
     }
 }
